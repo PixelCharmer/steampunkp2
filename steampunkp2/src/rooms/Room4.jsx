@@ -22,7 +22,7 @@ export default function Room4() {
                 onClick={() => toggleClue('clue1')}
             >
                 <div className="clue-node" />
-                <span className="clue-text">Cylinder C was always the first to resonate—its frequency aligned the entire archive</span>
+                <span className="clue-text">Cylinder C was always the first to resonate its frequency aligned the entire archive</span>
             </div>
 
             <div
@@ -31,7 +31,7 @@ export default function Room4() {
                 onClick={() => toggleClue('clue2')}
             >
                 <div className="clue-node" />
-                <span className="clue-text">Cylinder B answered C’s call once—its echo chamber still hums beneath the observatory dome</span>
+                <span className="clue-text">Cylinder B answered C's call once its echo chamber still hums beneath the observatory dome</span>
             </div>
 
             <div
@@ -40,7 +40,7 @@ export default function Room4() {
                 onClick={() => toggleClue('clue3')}
             >
                 <div className="clue-node" />
-                <span className="clue-text">Cylinder D has such a low tone that you know the melody is over</span>
+                <span className="clue-text">Cylinder D is heavy, deep and waning. It follows no one but marks the penultimate beat</span>
             </div>
 
             <div
@@ -49,7 +49,16 @@ export default function Room4() {
                 onClick={() => toggleClue('clue4')}
             >
                 <div className="clue-node" />
-                <span className="clue-text">Cylinder E resonates with ancient frequency notes.</span>
+                <span className="clue-text">Cylinder E resonates with ancient frequency notes</span>
+            </div>
+
+            <div
+                className={`clue-container ${visibleClue === 'clue5' ? 'visible' : ''}`}
+                style={{ top: '47%', left: '46%' }}
+                onClick={() => toggleClue('clue5')}
+            >
+                <div className="clue-node" />
+                <span className="clue-text">Cylinder A is not the first to speak, nor the last to fade</span>
             </div>
 
             <div className="buttons">

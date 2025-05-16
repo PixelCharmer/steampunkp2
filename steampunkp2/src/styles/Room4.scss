@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
 .room4 {
     background-size: cover;
@@ -14,8 +15,32 @@
     padding-top: 30px;
 
     h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
+        font-family: 'Cinzel Decorative', serif;
+        font-size: 2.5rem;
+        color: #e6c47a;
+        text-shadow: 0 0 8px rgba(255, 235, 174, 0.7), 2px 2px 4px rgba(0, 0, 0, 0.6);
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        animation: fadeInHeader 1.5s ease-out;
+        letter-spacing: 1px;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        display: inline-block;
+    }
+
+    p {
+        font-family: 'Lora', serif;
+        font-size: 1.2rem;
+        color: #ddd6c1;
+        text-align: center;
+        margin: 0 auto 1.5rem;
+        max-width: 800px;
+        line-height: 1.6;
+        opacity: 0.9;
+        text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+        animation: fadeInText 2s ease-out;
     }
 
     .clue-container {
@@ -30,12 +55,12 @@
             border-radius: 50%;
             background-color: transparent;
             box-shadow: 0 0 5px #edd661;
-            animation: pulse 2.0s infinite ease-in-out;
+            animation: pulse 2s infinite ease-in-out;
             z-index: 2;
-        }
 
-        .clue-node:hover {
-            box-shadow: 0 0 12px #e6c47a, 0 0 20px #d4b95a;
+            &:hover {
+                box-shadow: 0 0 12px #e6c47a, 0 0 20px #d4b95a;
+            }
         }
 
         .clue-text {
@@ -44,17 +69,56 @@
             top: 40px;
             left: 0;
             background-color: rgba(0, 0, 0, 0.85);
-            color: #fff;
-            padding: 0.5rem 0.75rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            white-space: nowrap;
-            max-width: 240px;
+            color: #f0e6d2;
+            font-family: 'Lora', serif;
+            font-size: 0.95rem;
+            line-height: 1.3;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            min-width: 300px;
+            max-width: 420px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             z-index: 3;
+            white-space: normal;
+            word-wrap: break-word;
+            animation: fadeInClue 0.6s ease-out;
         }
 
         &.visible .clue-text {
             display: block;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+
+        button {
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            padding: 0.75rem 1.5rem;
+            margin: 0 0.5rem;
+            background: linear-gradient(to bottom, #bfa15c, #8b6f3c);
+            border: 2px solid #e6c47a;
+            color: #2e1e0f;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 0 8px rgba(255, 223, 140, 0.4), inset 0 0 4px rgba(255, 255, 255, 0.2);
+            text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: linear-gradient(to bottom, #d2b87d, #a98553);
+                box-shadow: 0 0 12px rgba(255, 239, 184, 0.6), 0 0 6px rgba(255, 255, 255, 0.3);
+                transform: scale(1.05);
+            }
+
+            &:active {
+                background: #a37c43;
+                transform: scale(0.98);
+                box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+            }
         }
     }
 
@@ -72,85 +136,39 @@
         }
     }
 
-    .room4 .buttons {
-        display: flex;
-        justify-content: center;
-        margin-top: 2rem;
+    @keyframes fadeInHeader {
+        0% {
+            opacity: 0;
+            transform: translateY(-15px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
-    .room4 .buttons button {
-        font-family: 'Lora', serif;
-        font-size: 1rem;
-        padding: 0.75rem 1.5rem;
-        margin: 0 0.5rem;
-        background: linear-gradient(to bottom, #bfa15c, #8b6f3c);
-        border: 2px solid #e6c47a;
-        color: #2e1e0f;
-        border-radius: 8px;
-        cursor: pointer;
-        box-shadow: 0 0 8px rgba(255, 223, 140, 0.4), inset 0 0 4px rgba(255, 255, 255, 0.2);
-        text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
-        transition: all 0.3s ease;
+    @keyframes fadeInText {
+        0% {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        100% {
+            opacity: 0.9;
+            transform: translateY(0);
+        }
     }
 
-    .room4 .buttons button:hover {
-        background: linear-gradient(to bottom, #d2b87d, #a98553);
-        box-shadow: 0 0 12px rgba(255, 239, 184, 0.6), 0 0 6px rgba(255, 255, 255, 0.3);
-        transform: scale(1.05);
-    }
+    @keyframes fadeInClue {
+        0% {
+            opacity: 0;
+            transform: translateY(-5px);
+        }
 
-    .room4 .buttons button:active {
-        background: #a37c43;
-        transform: scale(0.98);
-        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
-    }
-}
-
-.room4 h2 {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 2.5rem;
-    color: #e6c47a;
-    text-shadow: 0 0 8px rgba(255, 235, 174, 0.7), 2px 2px 4px rgba(0, 0, 0, 0.6);
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-    animation: fadeInHeader 1.5s ease-out;
-    letter-spacing: 1px;
-}
-
-.room4 p {
-    font-family: 'Lora', serif;
-    font-size: 1.2rem;
-    color: #ddd6c1;
-    text-align: center;
-    margin: 0 auto 1.5rem;
-    max-width: 800px;
-    line-height: 1.6;
-    opacity: 0.9;
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-    animation: fadeInText 2s ease-out;
-}
-
-@keyframes fadeInHeader {
-    0% {
-        opacity: 0;
-        transform: translateY(-15px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInText {
-    0% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    100% {
-        opacity: 0.9;
-        transform: translateY(0);
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }
